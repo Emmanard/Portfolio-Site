@@ -1,4 +1,6 @@
+"use client";
 import { useState } from "react";
+import Image from "next/image";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
@@ -45,12 +47,11 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  // Combine all tech stacks into one array for the scrolling effect
   const allStacks = [
     "ReactJS",
     "Express",
     "Typescript",
-    "Chakra UI ",
+    "Chakra UI",
     "Node.js",
     "jQuery",
     "TailwindCSS",
@@ -78,7 +79,8 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        // ✅ Added min-h-[22rem] to fix layout spill
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 min-h-[22rem]",
         className
       )}
       style={{
@@ -90,26 +92,31 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-cover object-center")}
+              fill
+              sizes="100%"
             />
           )}
         </div>
         <div
           className={`absolute right-0 -bottom-5 ${
             id === 5 && "w-full opacity-80"
-          } `}
+          }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
               className="object-cover object-center w-full h-full"
+              fill
+              sizes="100%"
             />
           )}
         </div>
+
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
@@ -125,23 +132,20 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
-          >
+
+          <div className="font-sans text-lg lg:text-3xl max-w-96 font-bold z-10">
             {title}
           </div>
 
           {id === 2 && <GridGlobe />}
 
-          {/* Tech stack section with continuous scroll */}
           {id === 3 && (
             <div className="relative w-full h-auto overflow-hidden my-4">
               <div className="animate-stack-scroll whitespace-nowrap flex gap-4">
-                {/* Duplicate the array to create a seamless loop */}
                 {[...allStacks, ...allStacks].map((item, i) => (
                   <span
                     key={i}
-                    className="flex-shrink-0 text-white text-bold font-sans font-bold text-lg opacity-100 lg:opacity-100  transition"
+                    className="flex-shrink-0 text-white text-bold font-sans font-bold text-lg opacity-100 lg:opacity-100 transition"
                   >
                     {item}
                   </span>
@@ -159,6 +163,7 @@ export const BentoGridItem = ({
               >
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
+
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}

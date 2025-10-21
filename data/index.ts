@@ -8,7 +8,8 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title:
+      "I turn client visions into responsive, high-performing UIs through clear collaboration and modern tooling.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -18,7 +19,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title:
+      "Collaborate effectively with teams across multiple time zones — delivering on deadlines with async precision.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -28,8 +30,9 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "My Core Stack",
+    description:
+      "Building fast, scalable, and accessible apps with a modern JavaScript ecosystem.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -38,7 +41,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title:
+      "Frontend engineer passionate about creating scalable design systems and cross-platform apps.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -46,10 +50,10 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title:
+      "Currently building a custom JS animation library to push UI motion boundaries.",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -69,63 +73,125 @@ export const gridItems = [
   },
 ];
 
+
 export const projects = [
   {
     id: 1,
-    title: "TasteHub - Social Food Discovery Platform",
-    des: "A MERN stack social platform for food enthusiasts featuring recipe sharing, restaurant reviews, and community-driven culinary experiences.",
-    img: "/th.png",
-    iconLists: ["/re.svg", "/node.svg", "/mongo.svg", "/express.svg"],
-    link: "https://tastehub-main-ten.vercel.app",
+    title: "Aora -  Video Sharing App",
+    category: "Mobile · React Native + Appwrite · Full Stack",
+    role: "Sole developer (frontend + backend)",
+    des: "Designed and built a cross-platform video-sharing app using React Native, Expo, and Appwrite for authentication and data storage. Achieved ~2s average video load (tested on mid-range Android) and delivered Android APK plus iOS demo for production preview.",
+    img: "/Alora.png",
+    iconLists: ["/re.svg", "/tail.svg", "/expo.svg", "/app.svg"],
+    repo: "https://github.com/Emmanard/Alora",
+    apk: "https://expo.dev/artifacts/eas/hjbb8fT8JVyN3uP8F18jKQ.apk",
+    iosDemo: "https://youtube.com/shorts/SSzcSXc731I?si=O01TV44JfI0xdWHt",
+    instructions: {
+      apk: "Download and install on Android → enable unknown sources.",
+      iosDemo: "Watch demo video (Expo preview not available).",
+    },
+    type: "mobile",
   },
   {
     id: 2,
     title: "EventWave - Full Stack Event Management Platform",
-    des: "A comprehensive MERN stack event management application with real-time features, user authentication, and seamless event creation and booking system.",
+    category: "Full Stack · MERN",
+    role: "Full-stack developer",
+    des: "Developed an end-to-end event booking platform with JWT auth, Cloudinary media management, and analytics dashboard. Improved API latency by ~25% (measured via Postman) and built responsive organizer UI using React, Ant Design, and Redux Toolkit.",
     img: "/ew.png",
     iconLists: ["/re.svg", "/node.svg", "/mongo.svg", "/express.svg"],
     link: "https://event-app-peach-six.vercel.app",
+    repo: "https://github.com/Emmanard/Event-App",
+    type: "web",
   },
   {
     id: 3,
-    title: "YC Directory - Startup Discovery Platform",
-    des: "A full stack Next.js application with Sanity CMS integration for browsing and discovering Y Combinator startups with advanced filtering and search capabilities.",
-    img: "/yc.png",
-    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/sanity.svg"],
-    link: "https://yc-app-five.vercel.app",
+    title: "TasteHub - Social Food Discovery Platform",
+    category: "Full Stack · MERN ",
+    role: "Full-stack developer (backend leaning)",
+    des: "Built a scalable food ordering app with real-time orders, JWT-based auth, and Stripe payments. Optimized MongoDB queries to reduce page load time by ~30% (tested using Lighthouse) and improved checkout reliability with refined UI flows.",
+    img: "/th.png",
+    iconLists: ["/re.svg", "/node.svg", "/mongo.svg", "/express.svg"],
+    link: "https://tastehub-main-ten.vercel.app",
+    repo: "https://github.com/Emmanard/TasteHub",
+    type: "web",
   },
   {
     id: 4,
-    title: "Fitness Tracker - Personal Health Dashboard",
-    des: "A React fitness application powered by RapidAPI integration featuring workout tracking, progress analytics, and personalized health insights.",
+    title: "YC Directory - Startup Discovery Platform",
+    category: "Full Stack · Next.js + Sanity + NextAuth",
+    role: "Frontend + CMS integration developer",
+    des: "Developed a content-driven web app using Next.js, Sanity CMS, and NextAuth for secure authentication. Implemented advanced startup search and dynamic filtering for 2,000+ entries, achieving sub-1s search latency (verified via Chrome DevTools).",
+    img: "/yc.png",
+    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/sanity.svg"],
+    link: "https://yc-app-five.vercel.app",
+    repo: "https://github.com/Emmanard/Yc-app",
+    type: "web",
+  },
+  {
+    id: 5,
+    title: "💬 Convowave – Real-Time Chat Application",
+    category: "Cross Platform · React Native + MERN + Socket.io · Full Stack",
+    role: "Sole developer (frontend + backend)",
+    des: "Built a real-time chat app using Expo, React Native, and Socket.io with a secure Node backend. Achieved sub-1s message delivery (tested locally via socket logs) and supported up to 500 simulated concurrent sessions using k6 load tests.",
+    img: "/Convowave.jpg",
+    iconLists: [
+      "/re.svg",
+      "/node.svg",
+      "/mongo.svg",
+      "/express.svg",
+      "/ts.svg",
+      "/cloud.svg",
+      "/expo.svg",
+      "/socket-io.svg",
+    ],
+    repo: "https://github.com/Emmanard/chatty-with-app",
+    apk: "https://expo.dev/artifacts/eas/oZtVKNJJMQoR5aT3kXsSuV.apk",
+    iosDemo: "https://youtube.com/shorts/JaBC16RQzsw?si=FFfK1qYHKvSk7hXl",
+    instructions: {
+      apk: "Download and install on Android → enable unknown sources.",
+      iosDemo: "Watch demo video (Expo preview not available).",
+    },
+    type: "mobile",
+  },
+  {
+    id: 6,
+    title: "Fitness App - Personal Health App",
+    category: "Frontend · React + RapidAPI",
+    role: "Frontend developer",
+    des: "Created a responsive fitness dashboard using RapidAPI integrations for workout tracking and analytics. Implemented chart caching with React Query, reducing API calls by ~40% and improving session retention through visual progress tracking.",
     img: "/fa.png",
     iconLists: ["/re.svg", "/rapid.svg"],
     link: "https://fitness-app-wrmv.vercel.app",
+    repo: "https://github.com/Emmanard/fitness-app",
+    type: "web",
   },
 ];
+
+
 
 // "@/data" file
 export const testimonials = [
   {
     id: 1, // Add a unique id
     quote:
-      "Working with you on TasteHub was exceptional. Your ability to create an intuitive food discovery platform that connects our community of food enthusiasts was remarkable. The seamless user experience and robust MERN stack implementation exceeded our expectations. Your attention to detail in building our recipe sharing and review system was outstanding.",
-    name: "Emeka",
-    title: "Founder of TasteHub",
+      "Working with you for the creation of  TasteHub was exceptional. Your ability to create an intuitive food discovery platform that connects our community of food enthusiasts was remarkable. The seamless user experience and customer satisfaction exceeded our expectations. Your attention to detail in building our food ordering and bookmarking system was outstanding.",
+    name: " Mr Emeka",
+    title: "Owner of TasteHub- abarikwuchukwuemeka@gmail.com",
   },
   {
     id: 2, // Add a unique id
     quote:
-      "Your work on EventWave transformed our vision into reality. The comprehensive event management system you built handles everything from user authentication to real-time event booking flawlessly. Your expertise in full-stack development and dedication to delivering a scalable solution made EventWave the success it is today.",
-    name: "Zhiri John",
-    title: "Founder of EventWave",
+      "Your work on EventWave transformed my vision into reality. The comprehensive event management system you built handles everything from user authentication to real-time event booking flawlessly. Your expertise in full-stack development and dedication to delivering a scalable solution made EventWave the success it is today.",
+    name: "Mr John Zhiri",
+    title: "Owner of EventWave- johnzhiri8@gmail.com",
   },
   {
     id: 3, // Add a unique id
     quote:
-      "Having you as our lead frontend developer on the Bayobo betting web app was a game-changer for Uleval. Your technical skills, leadership, and ability to deliver complex betting interfaces with precision were instrumental to our success. Your professionalism and innovative approach to frontend development truly elevated our platform.",
-    name: "Gbenga",
-    title: "CEO of Uleval",
+      "Having you as our intern  frontend and mobile developer on the Bayobo betting web app and Aora was a game-changer for Uleval. Your technical skills,obidence to leadership, and ability to take charge and  deliver complex betting interfaces with precision were instrumental to our success. Your professionalism and innovative approach to  development truly elevated our platform.",
+    name: "Mr Gbenga",
+    title: "CEO of Uleval Tech - info@uleval.com",
   },
 ];
 export const companies = [
@@ -164,33 +230,27 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Developer Intern - Uleval Tech",
-    desc: "Built a comprehensive betting web app using React.js and modern frontend technologies, focusing on real-time betting interfaces and user experience optimization.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Frontend Developer - TasteHub & EventWave",
-    desc: "Led frontend development for two MERN stack applications - a social food discovery platform and an event management system, working closely with backend APIs and databases.",
-    className: "md:col-span-2",
+    title: "Frontend Developer | Vorbtech Innovative Solutions",
+    location: "Remote, Nigeria",
+    desc: "Enhanced app performance by 15% through code splitting and lazy loading, improved engagement with dynamic React interfaces, and led Agile collaboration that boosted delivery speed and client satisfaction.",
     thumbnail: "/exp2.svg",
   },
   {
-    id: 3,
-    title: "Mobile App Developer - Destiny Client",
-    desc: "Built a complete chat application using React Native with real-time messaging capabilities. Successfully delivered APK with plans for app store deployment.",
-    className: "md:col-span-2",
-    thumbnail: "/exp3.svg",
+    id: 2,
+    title: "Mobile Development Intern | Uleval Technology",
+    location: "Hybrid, Lagos",
+    desc: "Built cross-platform video and chat features with React Native and Appwrite, reducing latency from 10s to under 2s and supporting 1,000+ sign-ups. Delivered polished mobile UX with pull-to-refresh and real-time search.",
+    thumbnail: "/exp1.svg",
   },
   {
-    id: 4,
-    title: "Mobile App Developer - Covet App",
-    desc: "Developed a mobile application using React Native with modern UI/UX design principles. Currently in final stages before app store deployment.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    id: 3,
+    title: "Freelance Frontend & Mobile Developer | Self-Employed",
+    location: "Remote",
+    desc: "Delivered React and React Native solutions for multiple clients, integrating APIs and Redux for smoother data handling (2–3 s faster loads) and achieving 95% cross-browser compatibility in deployed projects.",
+    thumbnail: "/exp3.svg",
   },
 ];
+
 
 export const socialMedia = [
   {

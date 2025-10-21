@@ -33,7 +33,6 @@ const Hero = () => {
         />
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
-
       {/**
        *  UI: grid
        *  change bg color to bg-black-100 and reduce grid color from
@@ -53,8 +52,9 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Crafting Tomorrow&apos;s Web & Mobile Experiences
+          <p className="uppercase tracking-widest text-xs text-center text-blue-100/80 max-w-80">
+            Crafting fast, scalable, and visually engaging digital experiences
+            users genuinely enjoy.
           </p>
 
           {/**
@@ -63,19 +63,20 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Bringing Ideas to Life with Every Line of Code, One Code Commit at a Time"
+            words="Frontend & Mobile Engineer building immersive apps with React, Next.js, React Native, and TypeScript — blending design precision with clean, maintainable architecture."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Hi! I&apos;m Emmanuel Omunizua,
-            <br /> a Frontend and Mobile App Developer based in Nigeria.
+          <p className="tracking-widest text-xs text-center text-blue-100 max-w-80 mt-2">
+            Turning complex ideas into seamless, production-ready products —
+            with real-time data, motion, and intuitive UX at the heart of every
+            build.
           </p>
 
           {/* Option 1: Using onClick with smooth scroll */}
           <div onClick={() => scrollToSection("projects")} className="mt-10">
             <MagicButton
-              title="Show my work"
+              title="View My Work"
               icon={<FaLocationArrow />}
               position="right"
             />

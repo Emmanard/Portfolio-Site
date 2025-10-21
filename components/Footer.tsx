@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-0" id="contact">
+    <footer className="w-full pt-20 mb-0 pb-0" >
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <Image
@@ -17,57 +17,8 @@ const Footer = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p>
-        <div
-          onClick={() => {
-            // Create a temporary link and click it
-            const link = document.createElement("a");
-            link.href =
-              "mailto:emmmanard9@gmail.com?subject=Let's discuss your project&body=Hi Emmanuel,%0D%0A%0D%0AI'm interested in discussing a project with you.%0D%0A%0D%0ABest regards,";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
 
-            // Show fallback options after a delay
-            setTimeout(() => {
-              const userChoice = confirm(
-                "If your email app didn't open automatically, you can:\n\n" +
-                  "✉️ Copy my email address: emmmanard9@gmail.com\n" +
-                  "📧 Or email me manually\n\n" +
-                  "Click OK to copy my email address to clipboard"
-              );
-
-              if (userChoice) {
-                navigator.clipboard
-                  .writeText("emmmanard9@gmail.com")
-                  .then(() => {
-                    alert(
-                      "📋 Email address copied to clipboard!\n\nemmmanard9@gmail.com"
-                    );
-                  })
-                  .catch(() => {
-                    alert("📧 Please email me at:\nemmmanard9@gmail.com");
-                  });
-              }
-            }, 2000);
-          }}
-          className="cursor-pointer"
-        >
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </div>
-      </div>
+     
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center mb-0 pb-0">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Emmanuel Omunizua. All rights reserved.
