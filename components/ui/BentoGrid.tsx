@@ -312,7 +312,7 @@ const TechStackCarousel = () => {
     if (!isHovered)
       controls.start({
         x: [0, -2000],
-        transition: { duration: 30, ease: "linear", repeat: Infinity },
+        transition: { duration: 40, ease: "linear", repeat: Infinity },
       });
     else controls.stop();
   }, [isHovered, controls]);

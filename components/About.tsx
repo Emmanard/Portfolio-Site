@@ -12,7 +12,7 @@ const About = () => {
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold"
         >
@@ -22,7 +22,7 @@ const About = () => {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-gray-400 leading-relaxed text-lg"
         >
@@ -40,7 +40,7 @@ const About = () => {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-gray-400 leading-relaxed text-lg"
         >
@@ -60,7 +60,7 @@ const About = () => {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-gray-400 leading-relaxed text-lg"
         >
@@ -78,7 +78,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-gray-300"
         >

@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        delay: i * 0.15,
+        delay: i * 0.10,
         ease: "easeOut",
       },
     }),
