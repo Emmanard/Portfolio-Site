@@ -146,7 +146,7 @@ export const projects = [
       "/socket-io.svg",
     ],
     repo: "https://github.com/Emmanard/chatty-with-app",
-    apk: "https://expo.dev/artifacts/eas/oZtVKNJJMQoR5aT3kXsSuV.apk",
+    apk: "https://expo.dev/artifacts/eas/jbdB4cLxLnR4wTfgBdqfju.apk",
     iosDemo: "https://youtube.com/shorts/JaBC16RQzsw?si=FFfK1qYHKvSk7hXl",
     instructions: {
       apk: "Download and install on Android → enable unknown sources.",
