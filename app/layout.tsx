@@ -6,15 +6,15 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-site-2126.vercel.app"), 
-  title: "Emmanuel Omunizua Portfolio",
+  metadataBase: new URL("https://emmanuel-omunizua.vercel.app"),
+  title: "Emmanuel Omunizua | React Native & Full Stack Engineer",
   description:
-    "Frontend and Mobile App Developer specializing in modern web and mobile applications",
+    "React Native and Full Stack Engineer specializing in production mobile apps and modern web platforms",
   openGraph: {
-    title: "Emmanuel Omunizua Portfolio",
+    title: "Emmanuel Omunizua | React Native & Full Stack Engineer",
     description:
-      "Frontend and Mobile App Developer specializing in modern web and mobile applications",
-    url: "https://portfolio-site-2126.vercel.app",
+      "React Native and Full Stack Engineer specializing in production mobile apps and modern web platforms",
+    url: "https://emmanuel-omunizua.vercel.app",
     siteName: "Emmanuel Omunizua Portfolio",
     images: [
       {
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emmanuel Omunizua Portfolio",
+    title: "Emmanuel Omunizua | React Native & Full Stack Engineer",
     description:
-      "Frontend and Mobile App Developer specializing in modern web and mobile applications",
+      "React Native and Full Stack Engineer specializing in production mobile apps and modern web platforms",
     images: ["/preview-image.jpg"],
   },
   icons: {
