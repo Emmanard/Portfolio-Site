@@ -28,7 +28,7 @@ const About = () => {
         >
           I'm{" "}
           <span className="text-white font-semibold">Emmanuel Omunizua</span>, a
-          Frontend & Mobile App Engineer passionate about transforming complex
+          React Native & Full Stack Engineer passionate about transforming complex
           ideas into intuitive digital experiences. I specialize in building
           scalable and interactive products with{" "}
           <span className="text-purple font-semibold">React</span>,{" "}

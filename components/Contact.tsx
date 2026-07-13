@@ -12,7 +12,6 @@ import {
 import { Button } from "./ui/MovingBorders";
 import MagicButton from "./MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const CONTACT_ITEMS = [
@@ -181,7 +180,7 @@ const Contact: React.FC = () => {
 
         {/* Download CV Button */}
         <div className="flex justify-center mt-10 relative z-[1]">
-          <Link
+          <a
             href="/EMMANUEL OMUNIZUA -  FRONTEND & MOBILE APP ENGINEER CV .pdf"
             download
             target="_blank"
@@ -192,7 +191,7 @@ const Contact: React.FC = () => {
               icon={<FaLocationArrow />}
               position="right"
             />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

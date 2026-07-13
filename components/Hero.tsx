@@ -63,7 +63,7 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Frontend & Mobile Engineer building immersive apps with React, Next.js, React Native, and TypeScript — blending design precision with clean, maintainable architecture."
+            words="React Native & Full Stack Engineer building production mobile apps and scalable web platforms with TypeScript, React Native, Next.js, and Node.js."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
