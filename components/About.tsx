@@ -46,7 +46,18 @@ const About = () => {
         >
           My experience spans both web and mobile development — from designing
           and implementing rich, responsive UIs to optimizing performance and
-          integrating scalable backend systems. I've built products like{" "}
+          integrating scalable backend systems. I'm currently building production
+          React Native apps for{" "}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.mestra.mestra_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-medium hover:text-purple transition"
+          >
+            Mestra
+          </a>
+          , a food delivery and logistics platform. I've also built products
+          like{" "}
           <span className="text-white font-medium">TasteHub</span> (a MERN food
           ordering platform),{" "}
           <span className="text-white font-medium">EventWave</span> (ticketing
@@ -65,6 +76,10 @@ const About = () => {
           className="text-gray-400 leading-relaxed text-lg"
         >
           At{" "}
+          <span className="text-white font-semibold">Mestra</span>, I architect
+          and ship TypeScript + React Native apps across consumer, merchant, and
+          delivery workflows with real-time tracking, optimistic updates, and
+          push notifications. At{" "}
           <span className="text-white font-semibold">
             Vorbtech Innovative Solutions
           </span>
