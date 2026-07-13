@@ -76,6 +76,33 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 7,
+    title: "Mestra — Consumer App",
+    category: "Mobile · React Native · Full Stack",
+    role: "React Native & Frontend Developer",
+    des: "One of three production apps I helped architect for a food delivery and logistics platform — live order tracking, real-time sync, push notifications.",
+    img: "/mestra-consumer.jpg",
+    iconLists: ["/re.svg", "/ts.svg", "/socket-io.svg", "/cloud.svg"],
+    appStore:
+      "https://apps.apple.com/us/app/mestra/id6748778830",
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.mestra.mestra_app",
+    type: "store",
+  },
+  {
+    id: 8,
+    title: "Mestra — Restaurant Owner App",
+    category: "Mobile · React Native · Dashboard",
+    role: "React Native & Frontend Developer",
+    des: "Merchant-facing dashboard app for order and menu management, part of the same 3-app ecosystem.",
+    img: "/mestra-restaurant-owner.jpg",
+    iconLists: ["/re.svg", "/ts.svg", "/socket-io.svg", "/cloud.svg"],
+    appStore:
+      "https://apps.apple.com/us/app/mestra-restaurant-owner/id6751174158",
+    caption: "Available on the India App Store",
+    type: "store",
+  },
+  {
     id: 1,
     title: "Aora -  Video Sharing App",
     category: "Mobile · React Native + Appwrite · Full Stack",
@@ -228,6 +255,14 @@ export const companies = [
 ];
 
 export const workExperience = [
+  {
+    id: 4,
+    title:
+      "React Native & Frontend Developer | Mestra - Food Delivery & Logistics Platform (Contract)",
+    location: "Remote | Nov 2025 - Present",
+    desc: "Architected and shipped 3 production TypeScript + React Native apps (Consumer, Merchant, Delivery Partner) for iOS and Android, working directly with the CEO and CTO. Built real-time order tracking with Socket.io, optimistic UI updates with Zustand + React Query, and FCM push notification infrastructure across all three apps.",
+    thumbnail: "/exp4.svg",
+  },
   {
     id: 1,
     title: "Frontend Developer | Vorbtech Innovative Solutions",

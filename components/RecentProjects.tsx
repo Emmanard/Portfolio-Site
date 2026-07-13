@@ -161,6 +161,29 @@ const RecentProjects = () => {
                       <FaCode className="text-sm" /> Code
                     </a>
                   </>
+                ) : item.type === "store" ? (
+                  <>
+                    {item.googlePlay && (
+                      <a
+                        href={item.googlePlay}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-emerald-400 border border-emerald-400/40 bg-emerald-500/10 rounded-md px-3 py-1.5 hover:bg-emerald-500/20 hover:border-emerald-400 transition"
+                      >
+                        <FaAndroid className="text-sm" /> Google Play
+                      </a>
+                    )}
+                    {item.appStore && (
+                      <a
+                        href={item.appStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-gray-300 border border-gray-500/40 bg-gray-500/10 rounded-md px-3 py-1.5 hover:bg-gray-500/20 hover:border-gray-400 transition"
+                      >
+                        <FaApple className="text-sm" /> App Store
+                      </a>
+                    )}
+                  </>
                 ) : (
                   <>
                     <a
@@ -182,6 +205,12 @@ const RecentProjects = () => {
                   </>
                 )}
               </div>
+
+              {item.caption && (
+                <p className="text-center text-xs text-gray-500">
+                  {item.caption}
+                </p>
+              )}
 
               {item.type === "mobile" && item.instructions && (
                 <div className="relative">
