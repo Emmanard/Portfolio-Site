@@ -79,7 +79,7 @@ export const projects = [
     id: 7,
     title: "Mestra — Consumer App",
     category: "Mobile · React Native · Full Stack",
-    role: "React Native & Frontend Developer",
+    role: "React Native & Full Stack Developer",
     des: "One of three production apps I helped architect for a food delivery and logistics platform — live order tracking, real-time sync, push notifications.",
     img: "/mestra-consumer.jpg",
     iconLists: ["/re.svg", "/ts.svg", "/socket-io.svg", "/cloud.svg"],
@@ -93,13 +93,26 @@ export const projects = [
     id: 8,
     title: "Mestra — Restaurant Owner App",
     category: "Mobile · React Native · Dashboard",
-    role: "React Native & Frontend Developer",
+    role: "React Native & Full Stack Developer",
     des: "Merchant-facing dashboard app for order and menu management, part of the same 3-app ecosystem.",
     img: "/mestra-restaurant-owner.jpg",
     iconLists: ["/re.svg", "/ts.svg", "/socket-io.svg", "/cloud.svg"],
     appStore:
       "https://apps.apple.com/us/app/mestra-restaurant-owner/id6751174158",
-    caption: "Available on the India App Store",
+    caption: "App Store listing may be region or device restricted",
+    type: "store",
+  },
+  {
+    id: 9,
+    title: "Mestra — Delivery Partner App",
+    category: "Mobile · React Native · Logistics",
+    role: "React Native & Full Stack Developer",
+    des: "Delivery partner app for accepting orders, managing delivery workflows, and supporting rider operations across the Mestra logistics platform.",
+    img: "/mestra-delivery-partner.jpg",
+    iconLists: ["/re.svg", "/ts.svg", "/socket-io.svg", "/cloud.svg"],
+    appStore:
+      "https://apps.apple.com/us/app/mestra-delivery-partner/id6749651892",
+    caption: "Public App Store listing available",
     type: "store",
   },
   {
@@ -258,7 +271,7 @@ export const workExperience = [
   {
     id: 4,
     title:
-      "React Native & Frontend Developer | Mestra - Food Delivery & Logistics Platform (Contract)",
+      "React Native & Full Stack Developer | Mestra - Food Delivery & Logistics Platform (Contract)",
     location: "Remote | Nov 2025 - Present",
     desc: "Architected and shipped 3 production TypeScript + React Native apps (Consumer, Merchant, Delivery Partner) for iOS and Android, working directly with the CEO and CTO. Built real-time order tracking with Socket.io, optimistic UI updates with Zustand + React Query, and FCM push notification infrastructure across all three apps.",
     thumbnail: "/exp4.svg",
