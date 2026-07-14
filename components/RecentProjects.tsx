@@ -194,14 +194,16 @@ const RecentProjects = () => {
                     >
                       <FaExternalLinkAlt className="text-xs" /> Live
                     </a>
-                    <a
-                      href={item.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-purple border border-purple/40 bg-purple/10 rounded-md px-3 py-1.5 hover:bg-purple/20 hover:border-purple transition"
-                    >
-                      <FaCode className="text-sm" /> Code
-                    </a>
+                    {item.repo && (
+                      <a
+                        href={item.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-purple border border-purple/40 bg-purple/10 rounded-md px-3 py-1.5 hover:bg-purple/20 hover:border-purple transition"
+                      >
+                        <FaCode className="text-sm" /> Code
+                      </a>
+                    )}
                   </>
                 )}
               </div>
