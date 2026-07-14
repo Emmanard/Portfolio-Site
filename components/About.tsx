@@ -62,9 +62,9 @@ const About = () => {
           ordering platform),{" "}
           <span className="text-white font-medium">EventWave</span> (ticketing
           and payment platform with Paystack integration),{" "}
-          <span className="text-white font-medium">Aora</span> (a video sharing
+          <span className="text-white font-medium">Alora</span> (a video sharing
           app powered by Appwrite), and{" "}
-          <span className="text-white font-medium">Chatty</span> (a real-time
+          <span className="text-white font-medium">Convowave</span> (a real-time
           chat system using Socket.io).
         </motion.p>
 
@@ -78,8 +78,8 @@ const About = () => {
           At{" "}
           <span className="text-white font-semibold">Mestra</span>, I architect
           and ship TypeScript + React Native apps across consumer, merchant, and
-          delivery workflows with real-time tracking, optimistic updates, and
-          push notifications. At{" "}
+          delivery workflows with real-time tracking, Razorpay payments,
+          optimistic updates, and push notifications. At{" "}
           <span className="text-white font-semibold">
             Vorbtech Innovative Solutions
           </span>
