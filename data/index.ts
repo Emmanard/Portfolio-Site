@@ -80,7 +80,7 @@ export const projects = [
     title: "Mestra — Consumer App",
     category: "Mobile · React Native · Full Stack",
     role: "React Native & Full Stack Developer",
-    des: "One of three production apps I helped architect for a food delivery and logistics platform — live order tracking, real-time sync, push notifications.",
+    des: "One of three production apps I helped architect for a food delivery and logistics platform — live order tracking, real-time sync, push notifications, and Razorpay payment flows.",
     img: "/mestra-consumer.jpg",
     iconLists: ["/re.svg", "/ts.svg", "/socket-io.svg", "/cloud.svg"],
     appStore:
@@ -117,7 +117,7 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Aora -  Video Sharing App",
+    title: "Alora - Video Sharing App",
     category: "Mobile · React Native + Appwrite · Full Stack",
     role: "Sole developer (frontend + backend)",
     des: "Designed and built a cross-platform video-sharing app using React Native, Expo, and Appwrite for authentication and data storage. Achieved ~2s average video load (tested on mid-range Android) and delivered Android APK plus iOS demo for production preview.",
@@ -137,7 +137,7 @@ export const projects = [
     title: "EventWave - Full Stack Event Management Platform",
     category: "Full Stack · MERN",
     role: "Full-stack developer",
-    des: "Developed an end-to-end event booking platform with JWT auth, Cloudinary media management, and analytics dashboard. Improved API latency by ~25% (measured via Postman) and built responsive organizer UI using React, Ant Design, and Redux Toolkit.",
+    des: "Developed an end-to-end event booking platform with Paystack payments, QR-code ticket validation, and optimistic locking to prevent duplicate bookings during high-demand purchase flows.",
     img: "/ew.png",
     iconLists: ["/re.svg", "/node.svg", "/mongo.svg", "/express.svg"],
     link: "https://event-app-peach-six.vercel.app",
@@ -149,7 +149,7 @@ export const projects = [
     title: "TasteHub - Social Food Discovery Platform",
     category: "Full Stack · MERN ",
     role: "Full-stack developer (backend leaning)",
-    des: "Built a scalable food ordering app with real-time orders, JWT-based auth, and Stripe payments. Optimized MongoDB queries to reduce page load time by ~30% (tested using Lighthouse) and improved checkout reliability with refined UI flows.",
+    des: "Built a scalable food ordering app with Paystack payments and Redis-backed caching for faster menu, order, and checkout flows across the MERN stack.",
     img: "/th.png",
     iconLists: ["/re.svg", "/node.svg", "/mongo.svg", "/express.svg"],
     link: "https://tastehub-main-ten.vercel.app",
@@ -229,7 +229,7 @@ export const testimonials = [
   {
     id: 3, // Add a unique id
     quote:
-      "Having you as our intern  frontend and mobile developer on the Bayobo betting web app and Aora was a game-changer for Uleval. Your technical skills,obidence to leadership, and ability to take charge and  deliver complex betting interfaces with precision were instrumental to our success. Your professionalism and innovative approach to  development truly elevated our platform.",
+      "Having you as our intern frontend and mobile developer on the Bayobo betting web app and Alora was a game-changer for Uleval. Your technical skills, obedience to leadership, and ability to take charge and deliver complex betting interfaces with precision were instrumental to our success. Your professionalism and innovative approach to development truly elevated our platform.",
     name: "Mr Gbenga",
     title: "CEO of Uleval Tech - info@uleval.com",
   },
@@ -273,7 +273,7 @@ export const workExperience = [
     title:
       "React Native & Full Stack Developer | Mestra - Food Delivery & Logistics Platform (Contract)",
     location: "Remote | Nov 2025 - Present",
-    desc: "Architected and shipped 3 production TypeScript + React Native apps (Consumer, Merchant, Delivery Partner) for iOS and Android, working directly with the CEO and CTO. Built real-time order tracking with Socket.io, optimistic UI updates with Zustand + React Query, and FCM push notification infrastructure across all three apps.",
+    desc: "Architected and shipped 3 production TypeScript + React Native apps (Consumer, Merchant, Delivery Partner) for iOS and Android, working directly with the CEO and CTO. Built real-time order tracking with Socket.io, Razorpay payment integration, optimistic UI updates with Zustand + React Query, and FCM push notification infrastructure across all three apps.",
     thumbnail: "/exp4.svg",
   },
   {
