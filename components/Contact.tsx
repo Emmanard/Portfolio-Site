@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
     <section className="flex flex-col items-center gap-8 px-6 md:px-8 lg:px-12 py-12 bg-black-100 min-h-screen relative" id="contact">
       <div className="flex flex-col items-center relative z-[1]">
         <h1 className="heading lg:max-w-[45vw] text-center">
-          Ready to take <span className="text-purple">your</span> digital
+          Ready to take <span className="text-silver-400">your</span> digital
           presence to the next level?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
@@ -151,12 +151,12 @@ const Contact: React.FC = () => {
                     {value.includes("http") ? "Quick Support" : value}
                   </div>
                   {id === "phone" ? (
-                    <div className="flex text-purple items-center gap-1 text-sm text-muted">
+                    <div className="flex text-silver-400 items-center gap-1 text-sm text-muted">
                       <Clock size={16} />
                       {subtitle}
                     </div>
                   ) : (
-                    <div className="text-purple">{subtitle}</div>
+                    <div className="text-silver-400">{subtitle}</div>
                   )}
                 </div>
 
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
         {/* Download CV Button */}
         <div className="flex justify-center mt-10 relative z-[1]">
           <a
-            href="/EMMANUEL OMUNIZUA -  FRONTEND & MOBILE APP ENGINEER CV .pdf"
+            href="/Emmanuel_Omunizua_FullStackEngineer_CV.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"

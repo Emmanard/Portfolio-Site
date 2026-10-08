@@ -12,6 +12,7 @@ import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
+import OpenSource from "@/components/OpenSource";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <Grid />
         <About />
         <RecentProjects />
+        <OpenSource />
         <Clients />
         <Experience />
         <Approach />

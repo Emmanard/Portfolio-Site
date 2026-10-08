@@ -71,7 +71,7 @@ const RecentProjects = () => {
         className="heading text-center"
       >
         A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        <span className="text-silver-400">recent projects</span>
       </motion.h1>
 
       <motion.div
@@ -91,7 +91,7 @@ const RecentProjects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative group w-[19rem] sm:w-[20rem] md:w-[21rem] min-h-[28rem] bg-black flex flex-col justify-between p-5 rounded-xl cursor-pointer overflow-hidden hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all duration-300 border border-white/[0.08]"
+            className="relative group w-[19rem] sm:w-[20rem] md:w-[21rem] min-h-[28rem] bg-black flex flex-col justify-between p-5 rounded-xl cursor-pointer overflow-hidden hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(148,163,184,0.2)] transition-all duration-300 border border-white/[0.08]"
           >
             <div>
               <div className="relative w-full h-[12rem] overflow-hidden rounded-lg">
@@ -120,7 +120,7 @@ const RecentProjects = () => {
                 {item.title}
               </h2>
               {item.category && (
-                <p className="text-xs text-purple mt-1 font-medium">
+                <p className="text-xs text-silver-400 mt-1 font-medium">
                   {item.category}
                 </p>
               )}
@@ -156,7 +156,7 @@ const RecentProjects = () => {
                       href={item.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-purple border border-purple/40 bg-purple/10 rounded-md px-3 py-1.5 hover:bg-purple/20 hover:border-purple transition"
+                      className="flex items-center gap-1.5 text-xs text-silver-300 border border-silver-400/40 bg-silver-900/10 rounded-md px-3 py-1.5 hover:bg-silver-900/20 hover:border-silver-400 transition"
                     >
                       <FaCode className="text-sm" /> Code
                     </a>
@@ -222,7 +222,7 @@ const RecentProjects = () => {
                         expandedInstructions === item.id ? null : item.id
                       )
                     }
-                    className="text-xs text-gray-400 hover:text-purple transition underline decoration-dotted mx-auto block"
+                    className="text-xs text-gray-400 hover:text-silver-300 transition underline decoration-dotted mx-auto block"
                   >
                     {expandedInstructions === item.id ? "Hide" : "View"} setup
                     guide

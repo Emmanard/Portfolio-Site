@@ -1,8 +1,10 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: "Open Source", link: "#opensource" },
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
+  { name: "Resume", link: "/Emmanuel_Omunizua_FullStackEngineer_CV.pdf", external: true },
 ];
 
 export const gridItems = [
@@ -116,6 +118,17 @@ export const projects = [
     type: "store",
   },
   {
+    id: 10,
+    title: "Okike — DevSpax Platform",
+    category: "Frontend · Responsive Web · Product UI",
+    role: "Frontend developer",
+    des: "Contributed to the live DevSpax platform by building the Features Coming page and redesigning key screens to be responsive across desktop and mobile. Source code is private, so the card links to the public live site only.",
+    img: "/okike-devspax.png",
+    iconLists: ["/re.svg", "/ts.svg", "/tail.svg"],
+    link: "https://www.devspax.com/",
+    type: "web",
+  },
+  {
     id: 1,
     title: "Alora - Video Sharing App",
     category: "Mobile · React Native + Appwrite · Full Stack",
@@ -145,17 +158,6 @@ export const projects = [
     type: "web",
   },
   {
-    id: 10,
-    title: "Okike — DevSpax Platform",
-    category: "Frontend · Responsive Web · Product UI",
-    role: "Frontend developer",
-    des: "Contributed to the live DevSpax platform by building the Features Coming page and redesigning key screens to be responsive across desktop and mobile. Source code is private, so the card links to the public live site only.",
-    img: "/okike-devspax.png",
-    iconLists: ["/re.svg", "/ts.svg", "/tail.svg"],
-    link: "https://www.devspax.com/",
-    type: "web",
-  },
-  {
     id: 3,
     title: "TasteHub - Social Food Discovery Platform",
     category: "Full Stack · MERN ",
@@ -181,7 +183,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "💬 Convowave – Real-Time Chat Application",
+    title: "Convowave – Real-Time Chat Application",
     category: "Cross Platform · React Native + MERN + Socket.io · Full Stack",
     role: "Sole developer (frontend + backend)",
     des: "Built a real-time chat app using Expo, React Native, and Socket.io with a secure Node backend. Achieved sub-1s message delivery (tested locally via socket logs) and supported up to 500 simulated concurrent sessions using k6 load tests.",
@@ -281,25 +283,31 @@ export const companies = [
 export const workExperience = [
   {
     id: 4,
-    title:
-      "React Native & Full Stack Developer | Mestra - Food Delivery & Logistics Platform (Contract)",
-    location: "Remote | Nov 2025 - Present",
+    title: "Lead React Native & Full-Stack Engineer | Mestranow",
+    location: "Remote, Contract | Nov 2025 - Present",
     desc: "Architected and shipped 3 production TypeScript + React Native apps (Consumer, Merchant, Delivery Partner) for iOS and Android, working directly with the CEO and CTO. Built real-time order tracking with Socket.io, Razorpay payment integration, optimistic UI updates with Zustand + React Query, and FCM push notification infrastructure across all three apps.",
     thumbnail: "/exp4.svg",
   },
   {
     id: 1,
-    title: "Frontend Developer | Vorbtech Innovative Solutions",
-    location: "Remote, Nigeria",
+    title: "Frontend Engineer | Vorbtech Innovative Solutions",
+    location: "Remote | Dec 2024 - May 2025",
     desc: "Enhanced app performance by 15% through code splitting and lazy loading, improved engagement with dynamic React interfaces, and led Agile collaboration that boosted delivery speed and client satisfaction.",
     thumbnail: "/exp2.svg",
   },
   {
     id: 2,
     title: "Mobile Development Intern | Uleval Technology",
-    location: "Hybrid, Lagos",
+    location: "Hybrid, Lagos | Jun 2024 - Dec 2024",
     desc: "Built cross-platform video and chat features with React Native and Appwrite, reducing latency from 10s to under 2s and supporting 1,000+ sign-ups. Delivered polished mobile UX with pull-to-refresh and real-time search.",
     thumbnail: "/exp1.svg",
+  },
+  {
+    id: 5,
+    title: "Frontend Engineer | Okike Consults",
+    location: "Remote, Contract | Aug 2023 - May 2024",
+    desc: "Shipped responsive layouts, an upcoming-features page and API integrations on the DevSpax platform in React with Tailwind CSS and Redux, using Framer Motion for interface animation.",
+    thumbnail: "/exp2.svg",
   },
   {
     id: 3,
@@ -323,5 +331,48 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
+  },
+];
+
+export const openSourceContributions = [
+  {
+    id: 1,
+    title: "Offline network resilience",
+    description: "Improve offline handling with non-blocking banners, queued actions, bounded/deduplicated retry behaviour, idempotent order sync, and caching.",
+    prUrl: "https://github.com/kellymusk/Aframp/pull/388",
+    mergedDate: "2026-07-31",
+    technologies: ["TypeScript", "React", "Jest"],
+  },
+  {
+    id: 2,
+    title: "Distinguish network errors from auth failures",
+    description: "Distinguish between network failures and authentication failures in session refresh with discriminated error handling and tests.",
+    prUrl: "https://github.com/kellymusk/Aframp/pull/769",
+    mergedDate: "2026-10-01",
+    technologies: ["TypeScript", "React", "Jest"],
+  },
+  {
+    id: 3,
+    title: "Add live Stellar network status indicator",
+    description: "Add live Stellar network status indicator for wallet feature.",
+    prUrl: "https://github.com/kellymusk/Aframp/pull/778",
+    mergedDate: "2026-10-01",
+    technologies: ["TypeScript", "React"],
+  },
+  {
+    id: 4,
+    title: "Add PWA install prompt on mobile browsers",
+    description: "Add PWA install prompt on mobile browsers.",
+    prUrl: "https://github.com/kellymusk/Aframp/pull/571",
+    mergedDate: "2026-08-31",
+    technologies: ["TypeScript", "Next.js"],
+  },
+  {
+    id: 5,
+    title: "Implement responsive bottom navigation bar for mobile viewports",
+    description: "Implement responsive bottom navigation bar for mobile viewports.",
+    prUrl: "https://github.com/kellymusk/Aframp/pull/570",
+    mergedDate: "2026-08-31",
+    technologies: ["TypeScript", "React", "Tailwind"],
   },
 ];

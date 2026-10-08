@@ -31,10 +31,10 @@ const About = () => {
           React Native & Full Stack Engineer passionate about transforming complex
           ideas into intuitive digital experiences. I specialize in building
           scalable and interactive products with{" "}
-          <span className="text-purple font-semibold">React</span>,{" "}
-          <span className="text-purple font-semibold">React Native</span>,{" "}
-          <span className="text-purple font-semibold">Next.js</span>, and{" "}
-          <span className="text-purple font-semibold">TypeScript</span>.
+          <span className="text-silver-300 font-semibold">React</span>,{" "}
+          <span className="text-silver-300 font-semibold">React Native</span>,{" "}
+          <span className="text-silver-300 font-semibold">Next.js</span>, and{" "}
+          <span className="text-silver-300 font-semibold">TypeScript</span>.
         </motion.p>
 
         <motion.p
@@ -97,12 +97,12 @@ const About = () => {
           viewport={{ once: true }}
           className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-gray-300"
         >
-          <p>⚡ React / Next.js</p>
-          <p>⚡ React Native (Expo)</p>
-          <p>⚡ TypeScript / JavaScript</p>
-          <p>⚡ Tailwind CSS</p>
-          <p>⚡ Node.js / Express</p>
-          <p>⚡ MongoDB / Supabase</p>
+          <p>React / Next.js</p>
+          <p>React Native (Expo)</p>
+          <p>TypeScript / JavaScript</p>
+          <p>Tailwind CSS</p>
+          <p>Node.js / Express</p>
+          <p>MongoDB / Supabase</p>
         </motion.div>
 
         <motion.p
