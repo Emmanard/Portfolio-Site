@@ -7,17 +7,13 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-silver-400">approach</span>
+        My <span className="text-silver-400">engineering principles</span>
       </h1>
-      {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
-        {/* add des prop */}
         <Card
-          title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience,
-          and key functionalities. We'll discuss things like site structure,
-          navigation, and content requirements."
+          title="Performance First"
+          icon={<AceternityIcon order="01" />}
+          des="Every feature decision considers its impact on app performance. I optimize bundle size, implement caching strategies, and avoid unnecessary re-renders to ensure smooth user experiences."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -25,11 +21,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development"
-          icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my Burna boy playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          title="Scalable Architecture"
+          icon={<AceternityIcon order="02" />}
+          des="I build with scale in mind. Component reusability, clean state management, and proper separation of concerns ensure the codebase grows gracefully with the product."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -42,9 +36,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Progress Updates"
-          icon={<AceternityIcon order="Phase 3" />}
-          des="I provide regular progress updates to ensure alignment and transparency throughout the development process."
+          title="Type Safety"
+          icon={<AceternityIcon order="03" />}
+          des="TypeScript isn't optional. I leverage types to catch errors early, improve developer experience, and make the codebase more maintainable for future work."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -53,11 +47,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Launch"
-          icon={<AceternityIcon order="Phase 4" />}
-          des="This is where the magic happens! Based on the approved design,
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          title="Production Mindset"
+          icon={<AceternityIcon order="04" />}
+          des="I don't just write code that works locally. I consider edge cases, error states, loading states, and how the app behaves in real-world network conditions before shipping."
         >
           <CanvasRevealEffect
             animationSpeed={3}

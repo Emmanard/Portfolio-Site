@@ -114,12 +114,24 @@ const Contact: React.FC = () => {
           achieve your goals.
         </p>
 
-        <div className="cursor-pointer relative z-[1]">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-[1]">
+          <div className="cursor-pointer">
+            <MagicButton
+              title="Let's get in touch"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </div>
+          <a
+            href="mailto:emmanuelomunizua@gmail.com"
+            className="cursor-pointer"
+          >
+            <MagicButton
+              title="Send Email"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
         </div>
 
         {/* Contact Cards */}
