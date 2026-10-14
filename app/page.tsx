@@ -13,7 +13,6 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
 import OpenSource from "@/components/OpenSource";
-import Learning from "@/components/Learning";
 import TechStack from "@/components/TechStack";
 
 const Home = () => {
@@ -30,7 +29,6 @@ const Home = () => {
         <Clients />
         <Experience />
         <Approach />
-        <Learning />
         <Contact />
         <Footer />
       </div>
