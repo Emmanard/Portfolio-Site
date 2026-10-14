@@ -89,7 +89,10 @@ const TechStack = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 + idx * 0.1 }}
             viewport={{ once: true }}
-            className="p-6 border border-white/[0.08] rounded-xl bg-black"
+            style={{
+              background: "linear-gradient(90deg, #04071D 0%, #0C0E23 100%)",
+            }}
+            className="p-6 border border-white/[0.08] rounded-xl"
           >
             <h3 className="text-xl font-semibold text-white mb-4">{category.title}</h3>
             <div className="flex flex-wrap gap-3">
