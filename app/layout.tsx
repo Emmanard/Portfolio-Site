@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Emmanuel Omunizua Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image-v2.jpg",
         width: 1200,
         height: 630,
         alt: "Emmanuel Omunizua — Full-Stack & React Native Engineer",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og-image.jpg"],
+    images: ["/og-image-v2.jpg"],
   },
   icons: { icon: "/omini-logo.jpg" },
 };
