@@ -1,23 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+});
+
+const title = "Emmanuel Omunizua | Full-Stack & React Native Engineer";
+const description =
+  "Full-stack and React Native engineer with three years in production. Owns the API, job queues, payments, admin console and three live mobile apps for a US-founded delivery platform.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://emmanuel-omunizua.vercel.app"),
-  title: "Emmanuel Omunizua | Full-Stack Web & Mobile Engineer",
-
-  description:
-    "Full-Stack Web & Mobile Engineer building production products across React, Next.js, React Native, TypeScript and Node.js — from APIs and real-time systems to polished user interfaces.",
-
+  title,
+  description,
   openGraph: {
-    title: "Emmanuel Omunizua | Full-Stack Web & Mobile Engineer",
-
-    description:
-      "Full-Stack Web & Mobile Engineer building production products across React, Next.js, React Native, TypeScript and Node.js — from APIs and real-time systems to polished user interfaces.",
-
+    title,
+    description,
     url: "https://emmanuel-omunizua.vercel.app",
     siteName: "Emmanuel Omunizua Portfolio",
     images: [
@@ -25,7 +28,7 @@ export const metadata: Metadata = {
         url: "/preview-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Emmanuel Omunizua — Full-Stack Web & Mobile Engineer",
+        alt: "Emmanuel Omunizua — Full-Stack & React Native Engineer",
       },
     ],
     locale: "en_US",
@@ -33,34 +36,22 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emmanuel Omunizua | Full-Stack Web & Mobile Engineer",
-
-    description:
-      "Full-Stack Web & Mobile Engineer building production products across React, Next.js, React Native, TypeScript and Node.js — from APIs and real-time systems to polished user interfaces.",
-
+    title,
+    description,
     images: ["/preview-image.jpg"],
   },
-  icons: {
-    icon: "/omini-logo.jpg",
-  },
+  icons: { icon: "/omini-logo.jpg" },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${inter.variable} ${serif.variable} font-sans bg-[#fafafa] text-[#0a0a0a] antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

@@ -1,55 +1,45 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { workExperience } from "@/data";
-import { Button } from "./ui/MovingBorders";
+import { education, workExperience } from "@/data";
+import Reveal from "./Reveal";
 
-const Experience = () => {
-  return (
-    <div className="py-20 w-full">
-      <h1 className="heading">
-        My <span className="text-silver-400">work experience</span>
-      </h1>
+const Experience = () => (
+  <section id="experience" className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
+    <Reveal>
+      <p className="text-sm uppercase tracking-[0.2em] text-[#8b9099]">
+        Experience
+      </p>
+      <h2 className="mt-3 font-serif text-4xl sm:text-5xl">Where I&apos;ve worked.</h2>
+    </Reveal>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
-          <Button
-            key={card.id}
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="1.75rem"
-            style={{
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              borderRadius: `calc(1.75rem* 0.96)`,
-            }}
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-          >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <Image
-                src={card.thumbnail}
-                alt={card.title}
-                className="lg:w-32 md:w-20 w-16"
-                width={128}
-                height={128}
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
-                </h1>
-                <p className="text-start text-sm text-gray-400 mt-1">
-                  {card.location}
-                </p>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p>
-              </div>
+    <ol className="mt-12 border-t border-black/10">
+      {workExperience.map((job) => (
+        <Reveal key={job.role + job.company}>
+          <li className="grid gap-4 border-b border-black/10 py-8 md:grid-cols-[14rem_1fr] md:gap-10">
+            <div>
+              <p className="text-sm font-medium">{job.period}</p>
+              <p className="mt-1 text-sm text-[#8b9099]">{job.kind}</p>
             </div>
-          </Button>
-        ))}
-      </div>
-    </div>
-  );
-};
+            <div>
+              <h3 className="font-serif text-3xl">{job.role}</h3>
+              <p className="mt-1 text-[#4b5058]">{job.company}</p>
+              <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-[#2a2d33]">
+                {job.points.map((pt) => (
+                  <li key={pt} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8b9099]" />
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        </Reveal>
+      ))}
+    </ol>
+
+    <p className="mt-8 text-sm text-[#4b5058]">
+      <span className="font-medium text-black">{education.degree}</span> ·{" "}
+      {education.school} · {education.year}
+    </p>
+  </section>
+);
 
 export default Experience;

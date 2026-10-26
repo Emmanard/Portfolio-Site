@@ -1,116 +1,60 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { profile } from "@/data";
+import Reveal from "./Reveal";
 
-import MagicButton from "./MagicButton";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+const facts = [
+  ["Now", "Lead React Native & Full-Stack Engineer, Mestranow"],
+  ["Owns", "API, job queues, payments, admin console, 3 mobile apps"],
+  ["Writes", "TypeScript · React · Next.js · React Native · Node.js"],
+  ["Works", "Remote and async from Lagos (WAT, UTC+1)"],
+];
 
-const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
-  return (
-    <div className="pb-20 pt-36">
-      <div>
-        {/* Subtle silver spotlights — keeps the premium black/silver identity */}
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="rgba(255, 255, 255, 0.16)"
-        />
-
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="rgba(203, 213, 225, 0.10)"
-        />
-
-        <Spotlight
-          className="left-80 top-28 h-[80vh] w-[50vw]"
-          fill="rgba(148, 163, 184, 0.08)"
-        />
-      </div>
-
-      {/* Background grid */}
-      <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-        absolute top-0 left-0 flex items-center justify-center"
-      >
-        {/* Radial fade */}
-        <div
-          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
-          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
-        />
-      </div>
-
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-
-          {/* Name */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 text-center">
-            Emmanuel Omunizua
-          </h1>
-
-          {/* Professional identity */}
-          <p className="uppercase tracking-widest text-xs text-center text-gray-400 max-w-80 mb-6">
-            Full-Stack Web & Mobile Engineer
-          </p>
-
-          {/* Main positioning statement */}
-          <div className="text-center">
-            <TextGenerateEffect
-              words="I build products"
-              className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            />
-
-            <TextGenerateEffect
-              words="from the API to the interface."
-              className="text-center text-[40px] md:text-5xl lg:text-6xl text-slate-400"
-            />
-          </div>
-
-          {/* Core technologies */}
-          <p className="tracking-widest text-xs text-center text-gray-400 max-w-80 mt-4">
-            React · TypeScript · Next.js · React Native · Node.js
-          </p>
-
-          {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            <div
-              onClick={() => scrollToSection("projects")}
-              className="cursor-pointer"
-            >
-              <MagicButton
-                title="View My Work"
-                icon={<FaLocationArrow />}
-                position="right"
-                variant="mono"
-              />
-            </div>
-
-            <a
-              href="/Emmanuel_Omunizua_FullStackEngineer_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              <MagicButton
-                title="Resume"
-                icon={<FaLocationArrow />}
-                position="right"
-                variant="mono"
-              />
-            </a>
-          </div>
+const Hero = () => (
+  <section id="top" className="mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 md:pt-24">
+    <div className="grid items-center gap-12 lg:grid-cols-[1.25fr_1fr]">
+      <Reveal>
+        <p className="text-sm uppercase tracking-[0.2em] text-[#8b9099]">
+          {profile.role}
+        </p>
+        <h1 className="mt-5 font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">
+          I build the apps, the APIs and the payments{" "}
+          <em className="text-[#8b9099]">behind them.</em>
+        </h1>
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#4b5058]">
+          {profile.summary}
+        </p>
+        <div className="mt-9 flex flex-wrap gap-3">
+          <a
+            href="#work"
+            className="rounded-full bg-[#0a0a0a] px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2a2d33]"
+          >
+            View my work
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            className="rounded-full border border-black/20 px-7 py-3 text-sm font-medium transition-colors hover:border-black"
+          >
+            Get in touch
+          </a>
         </div>
-      </div>
+      </Reveal>
+
+      <Reveal delay={0.15}>
+        <div className="rounded-3xl bg-[#0a0a0a] p-8 text-white shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)]">
+          <p className="font-serif text-3xl">{profile.name}</p>
+          <dl className="mt-6 divide-y divide-white/10">
+            {facts.map(([k, v]) => (
+              <div key={k} className="grid grid-cols-[4.5rem_1fr] gap-4 py-3.5">
+                <dt className="text-xs uppercase tracking-widest text-[#8b9099]">
+                  {k}
+                </dt>
+                <dd className="text-sm leading-relaxed text-[#d4d7dd]">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </Reveal>
     </div>
-  );
-};
+  </section>
+);
 
 export default Hero;

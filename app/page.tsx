@@ -1,39 +1,27 @@
-"use client";
-
-import { navItems } from "@/data";
-
+import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
-import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
-import Approach from "@/components/Approach";
+import WorksWith from "@/components/WorksWith";
+import Work from "@/components/Work";
+import Proof from "@/components/Proof";
+import Stack from "@/components/Stack";
+import Principles from "@/components/Principles";
 import Experience from "@/components/Experience";
-import RecentProjects from "@/components/RecentProjects";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
-import About from "@/components/About";
-import OpenSource from "@/components/OpenSource";
-import TechStack from "@/components/TechStack";
 
-const Home = () => {
-  return (
-    <main className="relative mb-0 bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <Grid />
-        <About />
-        <RecentProjects />
-        <OpenSource />
-        <TechStack />
-        <Clients />
-        <Experience />
-        <Approach />
-        <Contact />
-        <Footer />
-      </div>
-    </main>
-  );
-};
+const Home = () => (
+  <main>
+    <Nav />
+    <Hero />
+    <WorksWith />
+    <Work />
+    <Proof />
+    <Stack />
+    <Principles />
+    <Experience />
+    <Testimonials />
+    <Contact />
+  </main>
+);
 
 export default Home;
