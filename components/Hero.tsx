@@ -16,7 +16,7 @@ const Hero = () => (
           {profile.role}
         </p>
         <h1 className="mt-5 font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">
-          I build the apps, the APIs and the payments{" "}
+          I build apps, the APIs and the payments{" "}
           <em className="text-[#8b9099]">behind them.</em>
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#4b5058]">
