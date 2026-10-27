@@ -13,9 +13,9 @@ const Testimonials = () => (
         </h2>
       </Reveal>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
         {testimonials.map((t, i) => (
-          <Reveal key={t.name} delay={i * 0.08}>
+          <Reveal key={t.name} delay={(i % 2) * 0.08}>
             <figure className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-7">
               <blockquote className="flex-1 text-sm leading-relaxed text-[#d4d7dd]">
                 &ldquo;{t.quote}&rdquo;

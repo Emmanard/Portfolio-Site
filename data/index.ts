@@ -29,7 +29,7 @@ export const navItems = [
 // Entries without one render a monogram tile instead.
 export const worksWith = [
   { name: "Mestranow", logo: "/logos/mestranow.jpg" },
-  { name: "Uleval Technology", logo: "" },
+  { name: "Uleval Technology", logo: "/logos/uleval.jpg" },
   { name: "Vorbtech", logo: "" },
   { name: "Okike Consults", logo: "" },
   { name: "Aframp", note: "open source", logo: "/logos/aframp.webp" },
@@ -77,6 +77,7 @@ export const projects = [
     tag: "Web · Company site",
     des: "Public landing site for Mestranow, the company behind the Mestra apps. Deployed on AWS EC2 behind nginx and PM2.",
     img: "/mestranow-landing.jpg",
+    stack: ["AWS EC2", "nginx", "PM2"],
     links: [{ label: "Live site", href: "https://mestranow.com/" }],
   },
   {
@@ -84,6 +85,7 @@ export const projects = [
     tag: "Web · React, TypeScript, MUI",
     des: "Flight search for Nigeria, Africa and worldwide: live airport suggestions, price-distribution charts, and destination backdrops from Unsplash. Falls back to mock data when live fares aren't available for a route.",
     img: "/spotter-flights.jpg",
+    stack: ["React", "TypeScript", "MUI", "TanStack Query", "Recharts"],
     links: [
       { label: "Live site", href: "https://spotterflights-eight.vercel.app/" },
       { label: "Code", href: "https://github.com/Emmanard/Spotterflights" },
@@ -94,6 +96,7 @@ export const projects = [
     tag: "Web · Food brand site",
     des: "Brand and ordering site for a Lagos food business: wholemeal pap and soy products, a bakery menu, and WhatsApp ordering.",
     img: "/gra-foods.jpg",
+    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Vitest"],
     links: [
       { label: "Live site", href: "https://gra-food.vercel.app/" },
       { label: "Code", href: "https://github.com/Emmanard/gra-food" },
@@ -104,6 +107,7 @@ export const projects = [
     tag: "Full stack · MERN",
     des: "Event booking with seat locking (optimistic locking plus distributed reservation), Paystack webhooks and QR tickets. 100+ concurrent sessions with zero double-bookings.",
     img: "/ew.png",
+    stack: ["React", "Node.js", "MongoDB", "Paystack"],
     links: [
       { label: "Live site", href: "https://event-app-peach-six.vercel.app" },
       { label: "Code", href: "https://github.com/Emmanard/Event-App" },
@@ -114,6 +118,7 @@ export const projects = [
     tag: "Full stack · MERN, Redis, GraphQL",
     des: "Food ordering with Redis caching that cut query times by 60%, and a live vendor dashboard on WebSockets. 99% uptime at 30+ concurrent users.",
     img: "/th.png",
+    stack: ["MERN", "Redis", "WebSockets", "GraphQL"],
     links: [
       { label: "Live site", href: "https://tastehub-main-ten.vercel.app" },
       { label: "Code", href: "https://github.com/Emmanard/TasteHub" },
@@ -124,6 +129,7 @@ export const projects = [
     tag: "Mobile · React Native, Socket.IO",
     des: "Real-time chat with automatic reconnection, offline message queuing and Redux persistence. 85%+ Jest coverage on core components.",
     img: "/Convowave.jpg",
+    stack: ["React Native", "Socket.IO", "Redux", "Jest"],
     links: [
       { label: "Code", href: "https://github.com/Emmanard/chatty-with-app" },
       {
@@ -137,6 +143,7 @@ export const projects = [
     tag: "Web · Developer challenge platform",
     des: "Responsive layouts, the upcoming-features page and API integrations in React, Tailwind and Redux. Source is private.",
     img: "/okike-devspax.png",
+    stack: ["React", "Tailwind CSS", "Redux", "Framer Motion"],
     links: [{ label: "Live site", href: "https://www.devspax.com/" }],
   },
 ];
@@ -302,6 +309,14 @@ export const education = {
 };
 
 export const testimonials = [
+  {
+    // Quote supplied by Mrs Adibe over message on 2026-10-27. Lightly copy-edited:
+    // name spelling corrected and the website URL in brackets removed.
+    quote:
+      "GRA Foods wanted online visibility, since it was just starting up its operations in millet and local grains processing, so creating the website was the best option for us at the time. Through the website, we engaged quite a number of customers as they were redirected to our WhatsApp, TikTok, and Instagram pages to place orders. This generated more leads and traffic to our website. Mr Emmanuel Omunizua has been a dedicated member of our team, calm, focused and target driven. It was indeed a pleasure working with him.",
+    name: "Mrs Rita Adibe",
+    title: "CEO, GRA Foods",
+  },
   {
     quote:
       "Working with you for the creation of  TasteHub was exceptional. Your ability to create an intuitive food discovery platform that connects our community of food enthusiasts was remarkable. The seamless user experience and customer satisfaction exceeded our expectations. Your attention to detail in building our food ordering and bookmarking system was outstanding.",

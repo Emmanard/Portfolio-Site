@@ -1,14 +1,10 @@
 import { education, workExperience } from "@/data";
 import Reveal from "./Reveal";
+import SectionHead from "./SectionHead";
 
 const Experience = () => (
   <section id="experience" className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
-    <Reveal>
-      <p className="text-sm uppercase tracking-[0.2em] text-[#8b9099]">
-        Experience
-      </p>
-      <h2 className="mt-3 font-serif text-4xl sm:text-5xl">Where I&apos;ve worked.</h2>
-    </Reveal>
+    <SectionHead eyebrow="Experience" title="Where I've worked." />
 
     <ol className="mt-12 border-t border-black/10">
       {workExperience.map((job) => (

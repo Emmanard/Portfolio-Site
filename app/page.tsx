@@ -1,3 +1,4 @@
+import Intro from "@/components/Intro";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import WorksWith from "@/components/WorksWith";
@@ -11,6 +12,7 @@ import Contact from "@/components/Contact";
 
 const Home = () => (
   <main>
+    <Intro />
     <Nav />
     <Hero />
     <WorksWith />

@@ -16,7 +16,8 @@ const Contact = () => (
           Contact
         </p>
         <h2 className="mx-auto mt-3 max-w-3xl font-serif text-5xl leading-[1.05] sm:text-6xl">
-          Have something to build? <em className="text-[#8b9099]">Let&apos;s talk.</em>
+          Have something to build?{" "}
+          <em className="text-[#8b9099]">Let&apos;s talk.</em>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-[#4b5058]">
           Open to remote full-stack and React Native roles, and to contract
@@ -47,7 +48,9 @@ const Contact = () => (
 
     <footer className="border-t border-black/10">
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-[#8b9099] sm:flex-row sm:justify-between sm:px-8">
-        <p>© {new Date().getFullYear()} {profile.name}</p>
+        <p>
+          © {new Date().getFullYear()} {profile.name}
+        </p>
         <p>{profile.location}</p>
       </div>
     </footer>

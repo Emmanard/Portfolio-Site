@@ -1,20 +1,17 @@
 import Image from "next/image";
 import { mestra, projects } from "@/data";
 import Reveal from "./Reveal";
+import SectionHead from "./SectionHead";
 
 const linkClass =
   "inline-flex items-center rounded-full border border-black/20 px-4 py-1.5 text-sm font-medium transition-colors hover:border-black hover:bg-black hover:text-white";
 
 const Work = () => (
   <section id="work" className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
-    <Reveal>
-      <p className="text-sm uppercase tracking-[0.2em] text-[#8b9099]">
-        Selected work
-      </p>
-      <h2 className="mt-3 font-serif text-4xl sm:text-5xl">
-        Products people use, and the systems under them.
-      </h2>
-    </Reveal>
+    <SectionHead
+      eyebrow="Selected work"
+      title="Products people use, and the systems under them."
+    />
 
     {/* Flagship */}
     <Reveal className="mt-12">
@@ -50,13 +47,13 @@ const Work = () => (
           <div className="grid grid-cols-3 items-start gap-3 sm:gap-4">
             {mestra.apps.map((app, i) => (
               <div key={app.name} className={i === 1 ? "mt-8" : ""}>
-                <div className="relative aspect-[9/19] overflow-hidden rounded-2xl bg-black shadow-xl">
+                <div className="relative aspect-[9/19] overflow-hidden rounded-2xl border-4 border-[#0a0a0a] bg-white shadow-xl">
                   <Image
                     src={app.img}
                     alt={`Mestra ${app.name} app screenshot`}
                     fill
                     sizes="(min-width: 1024px) 18vw, 30vw"
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <p className="mt-3 text-xs font-medium text-[#2a2d33]">
@@ -89,8 +86,16 @@ const Work = () => (
       </article>
     </Reveal>
 
-    {/* Everything else: pairs of cards, with the third one wide across the middle */}
-    <div className="mt-8 grid gap-6 md:grid-cols-2">
+    <Reveal className="mt-16">
+      <h3 className="font-serif text-3xl">More projects</h3>
+      <p className="mt-2 text-sm text-[#4b5058]">
+        Smaller builds: company and client sites, plus full-stack and mobile
+        projects.
+      </p>
+    </Reveal>
+
+    {/* Pairs of cards, with the third one wide across the middle */}
+    <div className="mt-6 grid gap-6 md:grid-cols-2">
       {projects.map((p, i) => {
         const featured = i === 2;
         return (
@@ -141,6 +146,16 @@ const Work = () => (
                 <p className="mt-3 text-sm leading-relaxed text-[#4b5058]">
                   {p.des}
                 </p>
+                <ul className="mt-4 flex flex-wrap gap-1.5">
+                  {p.stack.map((t) => (
+                    <li
+                      key={t}
+                      className="rounded-full bg-[#eceef1] px-2.5 py-1 text-xs font-medium text-[#2a2d33]"
+                    >
+                      {t}
+                    </li>
+                  ))}
+                </ul>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {p.links.map((l) => (
                     <a

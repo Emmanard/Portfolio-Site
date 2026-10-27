@@ -1,58 +1,54 @@
-# Personal Portfolio
+# Emmanuel Omunizua — Portfolio
 
-A concise, modern portfolio built with Next.js, Tailwind CSS and Three.js. Use this repo to showcase projects, skills, and contact details. Replace placeholders with your own content.
+Personal portfolio for a full-stack and React Native engineer. Built with
+Next.js 14 (App Router), TypeScript, Tailwind CSS and Framer Motion.
+Live at https://emmanuel-omunizua.vercel.app
 
-## Tech Stack
+## Structure
 
-- Next.js
-- Tailwind CSS
-- Three.js (optional 3D visuals)
-- Framer Motion (animations)
-- TypeScript (optional)
+| Path | What it is |
+|---|---|
+| `app/` | Layout (fonts, metadata, pre-paint intro check) and the single page |
+| `components/` | One component per section: Hero, Work, Proof, Stack, Experience, … |
+| `components/Intro.tsx` | Terminal-style welcome screen that splits open to reveal the page |
+| `components/Typed.tsx` | Terminal typing effect (used for the name and headline only) |
+| `data/index.ts` | **All the copy**: profile, projects, testimonials, experience |
+| `public/` | Images, logos, the CV PDF and the social preview image |
 
-## Features
+Content comes from the CV (`public/Emmanuel_Omunizua_FullStackEngineer_CV.pdf`);
+keep `data/index.ts` in sync with it.
 
-- Hero section with eye-catching visuals
-- Project grid with live links and tech icons
-- Optional 3D/canvas components for visual flair
-- Responsive layout and reusable components
+## Editing content
 
-## Quick Start
+- Projects, stats, testimonials, skills and experience live in `data/index.ts`.
+- Company logos: drop a file in `public/logos/` and set the `logo` path in
+  `worksWith`. Entries without a logo render as plain text.
+- Testimonials must be quotes the person approved.
 
-Prerequisites: Git, Node.js, npm or yarn
+## Run locally
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
-cd portfolio-main
-npm install
-npm run dev
+docker compose up --build
 # open http://localhost:3000
+docker compose down
 ```
 
-## Projects
+This builds the production image from `Dockerfile` (dependencies installed with
+`npm ci --ignore-scripts`, run as a non-root user, read-only filesystem, no
+mounted volumes, bound to localhost only). Rebuild after every change; a browser
+refresh alone will not pick up edits.
 
-Edit project entries in data/index.ts to list your work. Each project contains:
+The welcome screen shows once per browser session. Use a private window, or
+delete `intro-seen` from session storage, to see it again.
 
-- title
-- description
-- image paths (in /public)
-- tech icons
-- link (live or repo)
+## Security notes
 
-## Assets
+- `postcss.config.js` must stay a ~83-byte file. A malicious payload was once
+  injected there (commit `b9253a3`); any larger version should be treated as
+  compromised.
+- Install only from the lockfile with `npm ci --ignore-scripts`.
+  Don't run `npm install` on an unreviewed checkout.
 
-Place images and static files in the public/ directory. Update data and components to point to your assets.
+## Deploy
 
-## Customization
-
-- Update copy and images across components.
-- Replace social links in data/index.ts.
-- Remove or adapt 3D components if not needed.
-
-## Contact
-
-Add your contact details (email, website, social links) in the data file or footer component.
-
-## License
-
-MIT — change as desired.
+Pushes to `main` deploy through Vercel.

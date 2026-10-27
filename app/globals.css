@@ -11,3 +11,17 @@ html {
     scroll-behavior: auto;
   }
 }
+
+html[data-intro="skip"] #intro {
+  display: none;
+}
+
+.caret {
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}

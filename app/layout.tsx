@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 const serif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
@@ -47,9 +48,20 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Skip the welcome screen on repeat views in a session, or with reduced motion. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(sessionStorage.getItem("intro-seen")||matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.dataset.intro="skip"}catch(e){}`,
+          }}
+        />
+        <noscript>
+          <style>{`#intro{display:none!important}.tw-rest{visibility:visible!important}`}</style>
+        </noscript>
+      </head>
       <body
-        className={`${inter.variable} ${serif.variable} font-sans bg-[#fafafa] text-[#0a0a0a] antialiased`}
+        className={`${inter.variable} ${serif.variable} ${mono.variable} font-sans bg-[#fafafa] text-[#0a0a0a] antialiased`}
       >
         {children}
       </body>

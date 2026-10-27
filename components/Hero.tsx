@@ -1,5 +1,6 @@
 import { profile } from "@/data";
 import Reveal from "./Reveal";
+import Typed from "./Typed";
 
 const facts = [
   ["Now", "Lead React Native & Full-Stack Engineer, Mestranow"],
@@ -8,17 +9,26 @@ const facts = [
   ["Works", "Remote and async from Lagos (WAT, UTC+1)"],
 ];
 
+// Only the headline and the name on the card type themselves out; the rest of
+// the page is plain text so nobody has to wait to read it.
 const Hero = () => (
   <section id="top" className="mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 md:pt-24">
     <div className="grid items-center gap-12 lg:grid-cols-[1.25fr_1fr]">
-      <Reveal>
+      <div>
         <p className="text-sm uppercase tracking-[0.2em] text-[#8b9099]">
           {profile.role}
         </p>
-        <h1 className="mt-5 font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">
-          I build apps, the APIs and the payments{" "}
-          <em className="text-[#8b9099]">behind them.</em>
-        </h1>
+        <Typed
+          as="h1"
+          segments={[
+            "I build apps, the APIs and the payments ",
+            { text: "behind them.", className: "italic text-[#8b9099]" },
+          ]}
+          delay={300}
+          speed={40}
+          maxMs={1500}
+          className="mt-5 block font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-7xl"
+        />
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#4b5058]">
           {profile.summary}
         </p>
@@ -36,11 +46,17 @@ const Hero = () => (
             Get in touch
           </a>
         </div>
-      </Reveal>
+      </div>
 
-      <Reveal delay={0.15}>
+      <Reveal delay={0.1}>
         <div className="rounded-3xl bg-[#0a0a0a] p-8 text-white shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)]">
-          <p className="font-serif text-3xl">{profile.name}</p>
+          <Typed
+            as="p"
+            text={profile.name}
+            delay={500}
+            speed={45}
+            className="block font-serif text-3xl"
+          />
           <dl className="mt-6 divide-y divide-white/10">
             {facts.map(([k, v]) => (
               <div key={k} className="grid grid-cols-[4.5rem_1fr] gap-4 py-3.5">

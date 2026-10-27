@@ -1,26 +1,27 @@
-version: '3.8'
-
+# Run the production build locally:  docker compose up --build
+# Then open http://localhost:3000   (stop with: docker compose down)
+#
+# Deliberately NO volume mounts: the container never sees your project folder,
+# .git, or any .env file. It runs as a non-root user with a read-only root
+# filesystem and no extra Linux capabilities.
 services:
-  portfolio-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=development
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/.next
-    command: npm run dev
-
-  portfolio-prod:
+  portfolio:
     build:
       context: .
       dockerfile: Dockerfile
+    image: portfolio-local
+    container_name: portfolio
     ports:
-      - "3001:3000"
-    environment:
-      - NODE_ENV=production
-    restart: unless-stopped
+      - "127.0.0.1:3000:3000" # localhost only, not exposed to your network
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /app/.next/cache:uid=1001,gid=1001
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 1g
+    cpus: 1.0
+    pids_limit: 256
+    restart: "no"

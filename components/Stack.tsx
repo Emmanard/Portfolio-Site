@@ -1,7 +1,16 @@
 import { skills } from "@/data";
 import Reveal from "./Reveal";
+import SectionHead from "./SectionHead";
 
-const Group = ({ title, items, strong }: { title: string; items: string[]; strong?: boolean }) => (
+const Group = ({
+  title,
+  items,
+  strong,
+}: {
+  title: string;
+  items: string[];
+  strong?: boolean;
+}) => (
   <div>
     <h3 className="text-xs uppercase tracking-[0.2em] text-[#8b9099]">{title}</h3>
     <ul className="mt-4 flex flex-wrap gap-2.5">
@@ -23,12 +32,7 @@ const Group = ({ title, items, strong }: { title: string; items: string[]; stron
 
 const Stack = () => (
   <section id="stack" className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
-    <Reveal>
-      <p className="text-sm uppercase tracking-[0.2em] text-[#8b9099]">Stack</p>
-      <h2 className="mt-3 font-serif text-4xl sm:text-5xl">
-        What I reach for, and what I&apos;ve used.
-      </h2>
-    </Reveal>
+    <SectionHead eyebrow="Stack" title="What I reach for, and what I've used." />
     <Reveal className="mt-10 space-y-10" delay={0.1}>
       <Group title="Strong" items={skills.strong} strong />
       <Group title="Experienced" items={skills.experienced} />
